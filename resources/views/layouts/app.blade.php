@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -12,11 +13,15 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
 
+  <!-- Styles -->
+  <script>
+  window.Laravel = <?php echo json_encode(['crsfToken' => csrf_token(),]); ?>
+  </script>
 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
