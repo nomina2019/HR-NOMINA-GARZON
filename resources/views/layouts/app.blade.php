@@ -13,10 +13,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
 
-  <!-- Styles -->
-  <script>
-  window.Laravel = <?php echo json_encode(['crsfToken' => csrf_token(),]); ?>
-  </script>
 
 </head>
 <body>
