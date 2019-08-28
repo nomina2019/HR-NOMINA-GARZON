@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +11,12 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
 
-  <!-- Scripts -->
+  <!-- Styles -->
   <script>
-    window.Laravel = <?php echo json_encode([
-        'csrfToken' => csrf_token(),
-    ]); ?>
-</script>
+  window.Laravel = <?php echo json_encode(['crsfToken' => csrf_token(),]); ?>
+  </script>
 
 </head>
 <body>
