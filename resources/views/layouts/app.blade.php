@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link  href="/css/app.css" rel="stylesheet">
 
 
 </head>
