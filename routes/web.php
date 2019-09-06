@@ -12,13 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/login', function () {
+    return view('login');
 });
 
 Route::get('/phpinfo', function () {
     phpinfo();
 });
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/conceptos', 'ConceptosController@index');
+
+Route::get('/addconceptos', function () {
+    return view('Conceptos/add-ccnom');
+});
